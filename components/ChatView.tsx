@@ -131,7 +131,7 @@ export const ChatView: React.FC = () => {
 - يحق لكم التوجه إلى مقر مكتب العمل المختص وتقديم طلب تسوية ودية وفقاً للمادة (149) لسرعة إنهاء الشكوى خلال 21 يوماً.
 
 **الإجراء العملي:**
-يمكنكم إعادة إرسال الاستفسار الآن أو الاتصال مباشرة بالخط الساخن الموحد لوزارة العمل: **19468**.`,
+يمكنكم إعادة إرسال الاستفسار الآن أو التواصل مباشرة عبر رقم "اسأل وزارة العمل": **01035358685**.`,
         timestamp: new Date().toISOString(),
         source: 'text'
       }]);
@@ -361,8 +361,8 @@ export const ChatView: React.FC = () => {
 
           <div className="flex items-center gap-2 shrink-0">
             <div className="bg-black/30 backdrop-blur-md px-4 py-3 rounded-2xl border border-[#C5A059]/40 text-center">
-              <span className="block text-xs font-bold text-[#E5C378]">الخط الساخن للوزارة</span>
-              <span className="block text-lg font-black text-white font-mono">19468</span>
+              <span className="block text-xs font-bold text-[#E5C378]">رقم اسأل وزارة العمل</span>
+              <span className="block text-base font-black text-white font-mono dir-ltr">01035358685</span>
             </div>
           </div>
         </div>
@@ -513,8 +513,8 @@ export const ChatView: React.FC = () => {
               <span>قنوات الدعم والتفتيش العمالي</span>
             </div>
             <div className="flex justify-between text-slate-300 pt-1 border-t border-white/10">
-              <span>الخط الساخن لوزارة العمل:</span>
-              <span className="font-bold text-white font-mono text-sm">19468</span>
+              <span>رقم اسأل وزارة العمل:</span>
+              <span className="font-bold text-white font-mono text-sm">01035358685</span>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>لجان التسوية الودية:</span>

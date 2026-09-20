@@ -57,7 +57,6 @@ export const convertNumberToArabicWords = (num: number | string): string => {
   if (n === 2023) return 'ألفين وثلاثة وعشرين';
   if (n === 2030) return 'ألفين وثلاثين';
   if (n === 2003) return 'ألفين وثلاثة';
-  if (n === 19468) return 'تسعة عشر ألفاً وأربعمائة وثمانية وستين';
 
   const ones = ['', 'واحد', 'اثنين', 'ثلاثة', 'أربعة', 'خمسة', 'ستة', 'سبعة', 'ثمانية', 'تسعة'];
   const teens = ['عشرة', 'أحد عشر', 'اثنا عشر', 'ثلاثة عشر', 'أربعة عشر', 'خمسة عشر', 'ستة عشر', 'سبعة عشر', 'ثمانية عشر', 'تسعة عشر'];
@@ -175,8 +174,8 @@ export const sanitizeArabicForSpeech = (text: string): string => {
 
   // Specific contextual replacements for legal terms & measurements
   t = t
-    // Egyptian hotline
-    .replace(/19468/g, 'تسعة عشر ألفاً وأربعمائة وثمانية وستين')
+    // Ask Ministry of Labor phone number
+    .replace(/01035358685/g, 'صفر عشرة خمسة وثلاثين خمسة وثلاثين ثمانمائة وخمسة وستين')
     // Law & Decree references
     .replace(/قانون العمل رقم (\d+) لسنة (\d+)/g, (_, d1, d2) => `قانون العمل رقم ${convertNumberToArabicWords(d1)} لسنة ${convertNumberToArabicWords(d2)}`)
     .replace(/قانون العمل الجديد رقم (\d+) لسنة (\d+)/g, (_, d1, d2) => `قانون العمل الجديد رقم ${convertNumberToArabicWords(d1)} لسنة ${convertNumberToArabicWords(d2)}`)

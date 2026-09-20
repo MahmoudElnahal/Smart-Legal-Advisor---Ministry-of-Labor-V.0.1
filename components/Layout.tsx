@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <span>المرجع التشريعي: قانون 14 لسنة 2025 والوقائع المصرية</span>
-            <span className="hidden sm:inline">الخط الساخن الموحد: 19468</span>
+            <span className="hidden sm:inline">رقم اسأل وزارة العمل: 01035358685</span>
           </div>
         </div>
       </div>
@@ -108,10 +108,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <span>خدمة المواطنين والشكاوى</span>
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li>• الخط الساخن المباشر: <strong className="text-white font-mono text-sm">19468</strong></li>
+              <li>• رقم اسأل وزارة العمل: <strong className="text-white font-mono text-sm">01035358685</strong></li>
               <li>• منظومة الشكاوى الحكومية: <strong className="text-white font-mono text-sm">16528</strong></li>
               <li>• لجان التسوية الودية: بجميع مديريات العمل بالمحافظات</li>
-              <li>• البريد الرسمي: support@manpower.gov.eg</li>
+              <li>• البريد الرسمي: face@labou.gov.eg</li>
             </ul>
           </div>
 
