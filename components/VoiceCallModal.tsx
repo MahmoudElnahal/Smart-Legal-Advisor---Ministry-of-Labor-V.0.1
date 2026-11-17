@@ -282,20 +282,21 @@ export const VoiceCallModal: React.FC<VoiceCallModalProps> = ({ isOpen, onClose 
       } else {
         setCallStatus('idle');
       }
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('AI call error:', err);
-      const fallback = 'وفقاً لصريح نصوص قانون العمل المصري الجديد رقم 14 لسنة 2025، تم حفظ استفسار سيادتكم وسيتم ربطه بالمستشار القانوني مباشرة، ويمكنكم مراجعة لجنة التسوية بمكتب العمل وفق المادة 149.';
-      const fallbackTurn: CallTurn = {
+      const errDetail = err instanceof Error ? err.message : 'حدث خطأ أثناء الاتصال بالخادم.';
+      const errorText = `تعذر الحصول على رد من المستشار القانوني عبر الخادم: ${errDetail}`;
+      const errorTurn: CallTurn = {
         role: 'model',
-        text: fallback,
+        text: errorText,
         timestamp: new Date().toISOString()
       };
-      setTranscript([...updatedTranscript, fallbackTurn]);
-      setLatestAIResponse(fallback);
+      setTranscript([...updatedTranscript, errorTurn]);
+      setLatestAIResponse(errorText);
       setCurrentSpeechText('');
       if (!isSpeakerMuted) {
         setCallStatus('speaking');
-        speakArabic(fallback, {
+        speakArabic('تعذر الاتصال بخدمة المستشار القانوني في الوقت الحالي. يرجى المحاولة مرة أخرى.', {
           onStart: () => setCallStatus('speaking'),
           onEnd: () => setCallStatus('idle'),
           onError: () => setCallStatus('idle')
